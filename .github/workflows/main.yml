@@ -6,6 +6,7 @@ jobs:
       - name: Post comment
         uses: KeisukeYamashita/create-comment@v1
         with:
-          comment: |
+         repo-token: ${{ secrets.GITHUB_TOKEN }}
+         comment: |
             Issue title must start with 'ABC-'.
             Auto-closing this issue.

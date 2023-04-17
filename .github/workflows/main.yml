@@ -1,7 +1,7 @@
 on:
  issues:
     types:
-     [issue_comment]
+     - labeled
 jobs:
   commit-message-check:
     runs-on: ubuntu-latest

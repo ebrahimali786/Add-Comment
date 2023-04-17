@@ -1,14 +1,11 @@
-name: Create Comment
-
-on: [issue_comment]
-
+on: push
 jobs:
-  create_comment:
+  commit-message-check:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions-ecosystem/action-create-comment@v1
+      - name: Post comment
+        uses: KeisukeYamashita/create-comment@v1
         with:
-          github_token: ${{ secrets.github_token }}
-          body: |
-            Hello, @${{ github.actor }}!
+          comment: |
+            Issue title must start with 'ABC-'.
+            Auto-closing this issue.

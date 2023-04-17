@@ -1,7 +1,4 @@
-on:
- issues:
-    types:
-     - labeled
+on: push
 jobs:
   commit-message-check:
     runs-on: ubuntu-latest

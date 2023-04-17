@@ -9,7 +9,6 @@ jobs:
       - name: Post comment
         uses: KeisukeYamashita/create-comment@v1
         with:
-         issue-number: 2
          comment: |
             This is a multi-line test comment
             - With GitHub **Markdown** :sparkles:
